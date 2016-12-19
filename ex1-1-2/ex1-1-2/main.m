@@ -14,7 +14,6 @@ int main(int argc, const char * argv[]) {
         NSArray *testArr = @[@"value1",@"value2",@"value3"];
         NSDictionary *testDT = @{@"key1":@"value1",@"key2":@"value2",@"key3":@"value3"};
         
-        
         NSLog(@"%@", testArr);
         NSLog(@"%@", testDT);
     }
