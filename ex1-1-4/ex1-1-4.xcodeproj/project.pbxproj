@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		A34045BB1E08CDFF00A202DE /* ex1-1-4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ex1-1-4"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34045BE1E08CDFF00A202DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A34045C51E08CF7F00A202DE /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = "ex1-1-4/Account.m"; sourceTree = "<group>"; };
-		A34045C71E08CFB400A202DE /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Account.h; path = "ex1-1-4/Account.h"; sourceTree = "<group>"; };
+		A34045C51E08CF7F00A202DE /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		A34045C71E08CFB400A202DE /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,8 +44,6 @@
 		A34045B21E08CDFF00A202DE = {
 			isa = PBXGroup;
 			children = (
-				A34045C51E08CF7F00A202DE /* Account.m */,
-				A34045C71E08CFB400A202DE /* Account.h */,
 				A34045BD1E08CDFF00A202DE /* ex1-1-4 */,
 				A34045BC1E08CDFF00A202DE /* Products */,
 			);
@@ -62,6 +60,8 @@
 		A34045BD1E08CDFF00A202DE /* ex1-1-4 */ = {
 			isa = PBXGroup;
 			children = (
+				A34045C51E08CF7F00A202DE /* Account.m */,
+				A34045C71E08CFB400A202DE /* Account.h */,
 				A34045BE1E08CDFF00A202DE /* main.m */,
 			);
 			path = "ex1-1-4";
@@ -222,6 +222,7 @@
 		A34045C31E08CDFF00A202DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -229,6 +230,7 @@
 		A34045C41E08CDFF00A202DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
