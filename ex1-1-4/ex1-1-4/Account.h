@@ -9,10 +9,10 @@
 
 #ifndef Account_h
 #define Account_h
-#endif 
-#import <Foundation/Foundation.h>
 
-@interface Account : NSObject
+#import <Foundation/Foundation.h>
+#import "FavoriteProgrammingLanguageDelegate.h"
+@interface Account : NSObject<FavoriteProgrammingLanguageDelegate>
 
 @property(nonatomic,copy) NSString *name;
 @property(nonatomic) NSInteger age;
@@ -22,4 +22,6 @@
 -(id)initWithName :(NSString*)name :(NSInteger)age :(NSString*)sex :(NSString*)language;
 
 -(void)print;
+-(void)joinDo;
 @end
+#endif 

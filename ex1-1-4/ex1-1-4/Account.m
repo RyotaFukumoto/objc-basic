@@ -7,6 +7,7 @@
 //
 
 #import "Account.h"
+#import "FavoriteProgrammingLanguage.h"
 @implementation Account
 
 
@@ -27,5 +28,12 @@
         NSLog(@"%@さんは、%@が得意な%zd歳です。", _name, _language, _age);
     }
 }
-
+-(void)canObjC{
+    NSLog(@"%@Obj-Cができる",_name);
+}
+-(void)joinDo{
+   FavoriteProgrammingLanguage *FPLPoint = [[FavoriteProgrammingLanguage alloc]init];
+    FPLPoint.delegate = self;
+    [FPLPoint joinInternship];
+}
 @end
