@@ -5,9 +5,9 @@
 //  Created by ryota on 2016/12/20.
 //  Copyright © 2016年 ryota. All rights reserved.
 //
-
+#import <Foundation/Foundation.h>
 #import "Account.h"
-#import "FavoriteProgrammingLanguage.h"
+
 @implementation Account
 
 
@@ -17,6 +17,7 @@
         self.age = age;
         self.sex = sex;
         self.language = language;
+        
     }
     return self;
 }
@@ -28,12 +29,6 @@
         NSLog(@"%@さんは、%@が得意な%zd歳です。", _name, _language, _age);
     }
 }
--(void)canObjC{
-    NSLog(@"%@Obj-Cができる",_name);
-}
--(void)joinDo{
-   FavoriteProgrammingLanguage *FPLPoint = [[FavoriteProgrammingLanguage alloc]init];
-    FPLPoint.delegate = self;
-    [FPLPoint joinInternship];
-}
+
+
 @end

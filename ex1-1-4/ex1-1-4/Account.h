@@ -11,17 +11,15 @@
 #define Account_h
 
 #import <Foundation/Foundation.h>
-#import "FavoriteProgrammingLanguageDelegate.h"
-@interface Account : NSObject<FavoriteProgrammingLanguageDelegate>
+@interface Account:NSObject
 
 @property(nonatomic,copy) NSString *name;
 @property(nonatomic) NSInteger age;
 @property(nonatomic,copy) NSString *sex;
 @property(nonatomic,copy) NSString *language;
 
--(id)initWithName :(NSString*)name :(NSInteger)age :(NSString*)sex :(NSString*)language;
+-(id)initWithName:(NSString *) name :(NSInteger) age :(NSString *) sex :(NSString *)language;
 
 -(void)print;
--(void)joinDo;
 @end
 #endif 
