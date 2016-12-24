@@ -30,5 +30,12 @@
     }
 }
 
-
+-(void)joinDo{
+    FavoriteProgrammingLanguage *favorit = [[FavoriteProgrammingLanguage alloc] init];
+    favorit.delegate = self;
+    [favorit joinInternship];
+}
+- (void)canObjC{
+    NSLog(@"%@Obj-Cができる",_name);
+}
 @end

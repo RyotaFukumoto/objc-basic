@@ -11,7 +11,6 @@
 
 @protocol FavoriteProgrammingLanguageDelegate<NSObject>
 
-
 @optional
 -(void) canObjC;
 @end
