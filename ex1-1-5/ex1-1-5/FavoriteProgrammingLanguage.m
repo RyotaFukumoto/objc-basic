@@ -13,9 +13,9 @@
 
 -(void)joinInternship{
     NSLog(@"インターンシップに参加");
-    if ([self.delegate respondsToSelector:@selector(canObjC)]) {
+    if ([_delegate respondsToSelector:@selector(canObjC)]) {
         
-        [self.delegate canObjC];
+        [_delegate canObjC];
         
     }
     
