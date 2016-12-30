@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSLog(@"%hhd", BOY);
         NSLog(@"%@", STR);
-        NSLog(@"%zd", (long)ITG); //%zd 環境に依存しない
+        NSLog(@"%zd", ITG); //%zd 環境に依存しない
         NSLog(@"%0.3f",FLT);
     }
     return 0;
