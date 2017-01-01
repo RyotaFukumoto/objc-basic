@@ -20,9 +20,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     _PoohImageView.contentMode =  UIViewContentModeScaleAspectFit;
     _PoohImageView.clipsToBounds=YES;
-    _PoohImageView.layer.cornerRadius=100;
-    UIImage *img = [UIImage imageNamed:@"pooh_ex_02.jpg"];
+    _PoohImageView.layer.cornerRadius=15.0f;
+    UIImage *img = [UIImage imageNamed:@"download"];
+    
     _PoohImageView.image = img;
+    self.view.backgroundColor=[UIColor blackColor];
 }
 
 
