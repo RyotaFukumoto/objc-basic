@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,29 +19,28 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yy7-un-vch">
-                                <rect key="frame" x="87" y="248" width="240" height="240"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="IYb-mO-LgK"/>
-                                </constraints>
-                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vxf-Pz-8Dc">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Yy7-un-vch" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ftr-GR-sAF"/>
-                            <constraint firstItem="Yy7-un-vch" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VTK-FL-JH9"/>
+                            <constraint firstItem="vxf-Pz-8Dc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0yJ-YB-s5d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vxf-Pz-8Dc" secondAttribute="bottom" id="EKJ-qJ-CIl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vxf-Pz-8Dc" secondAttribute="trailing" id="H8F-vK-wWu"/>
+                            <constraint firstItem="vxf-Pz-8Dc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="c74-Wq-NOj"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="PoohImageView" destination="Yy7-un-vch" id="iOa-Co-Fay"/>
+                        <outlet property="table" destination="vxf-Pz-8Dc" id="vOs-iG-vtT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122.40000000000001" y="34.632683658170919"/>
         </scene>
     </scenes>
 </document>

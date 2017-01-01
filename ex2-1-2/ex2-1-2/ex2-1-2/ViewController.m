@@ -23,6 +23,7 @@
     _PoohImageView.layer.cornerRadius=100;
     UIImage *img = [UIImage imageNamed:@"pooh_ex_02.jpg"];
     _PoohImageView.image = img;
+    sel
 }
 
 

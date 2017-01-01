@@ -15,7 +15,6 @@
 		A3FCFFA01E0C468D002774B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3FCFF9E1E0C468D002774B2 /* LaunchScreen.storyboard */; };
 		A3FCFFAB1E0C468D002774B2 /* ex2_1_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FCFFAA1E0C468D002774B2 /* ex2_1_2Tests.m */; };
 		A3FCFFB61E0C468D002774B2 /* ex2_1_2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3FCFFB51E0C468D002774B2 /* ex2_1_2UITests.m */; };
-		A3FCFFC41E0C4C76002774B2 /* pooh_ex_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A3FCFFC31E0C4C76002774B2 /* pooh_ex_02.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		A3FCFFB11E0C468D002774B2 /* ex2-1-2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ex2-1-2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3FCFFB51E0C468D002774B2 /* ex2_1_2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ex2_1_2UITests.m; sourceTree = "<group>"; };
 		A3FCFFB71E0C468D002774B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3FCFFC31E0C4C76002774B2 /* pooh_ex_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pooh_ex_02.jpg; path = ../../../../Downloads/pooh_ex_02.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 				A3FCFF9C1E0C468D002774B2 /* Assets.xcassets */,
 				A3FCFF9E1E0C468D002774B2 /* LaunchScreen.storyboard */,
 				A3FCFFA11E0C468D002774B2 /* Info.plist */,
-				A3FCFFC31E0C4C76002774B2 /* pooh_ex_02.jpg */,
 				A3FCFF901E0C468D002774B2 /* Supporting Files */,
 			);
 			path = "ex2-1-2";
@@ -249,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3FCFFC41E0C4C76002774B2 /* pooh_ex_02.jpg in Resources */,
 				A3FCFFA01E0C468D002774B2 /* LaunchScreen.storyboard in Resources */,
 				A3FCFF9D1E0C468D002774B2 /* Assets.xcassets in Resources */,
 				A3FCFF9B1E0C468D002774B2 /* Main.storyboard in Resources */,
@@ -511,6 +507,7 @@
 				A3FCFFBC1E0C468D002774B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3FCFFBD1E0C468D002774B2 /* Build configuration list for PBXNativeTarget "ex2-1-2Tests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +516,7 @@
 				A3FCFFBF1E0C468D002774B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3FCFFC01E0C468D002774B2 /* Build configuration list for PBXNativeTarget "ex2-1-2UITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +525,7 @@
 				A3FCFFC21E0C468D002774B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
