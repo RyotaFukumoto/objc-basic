@@ -25,7 +25,6 @@ numberOfItemsInSection:(NSInteger)section{
     return [image count];
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    //    UICollectionViewCell *cell = [UICollectionViewCell init];
     UICollectionViewCell *cell;
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
                                                      forIndexPath:indexPath];
