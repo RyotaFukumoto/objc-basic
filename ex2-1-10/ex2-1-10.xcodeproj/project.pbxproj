@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A326B9D31E1D16170073F975 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A326B9D21E1D16170073F975 /* ViewController.m */; };
+		A326B9D51E1D162D0073F975 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = A326B9D41E1D162D0073F975 /* Property List.plist */; };
 		A3EA9BB41E181EE60098EBE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA9BB31E181EE60098EBE9 /* main.m */; };
 		A3EA9BB71E181EE60098EBE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA9BB61E181EE60098EBE9 /* AppDelegate.m */; };
 		A3EA9BBD1E181EE60098EBE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EA9BBB1E181EE60098EBE9 /* Main.storyboard */; };
@@ -14,8 +16,6 @@
 		A3EA9BC21E181EE60098EBE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EA9BC01E181EE60098EBE9 /* LaunchScreen.storyboard */; };
 		A3EA9BCD1E181EE60098EBE9 /* ex2_1_10Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA9BCC1E181EE60098EBE9 /* ex2_1_10Tests.m */; };
 		A3EA9BD81E181EE60098EBE9 /* ex2_1_10UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA9BD71E181EE60098EBE9 /* ex2_1_10UITests.m */; };
-		A3EA9BE61E181EEF0098EBE9 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3EA9BE51E181EEF0098EBE9 /* Property List.plist */; };
-		A3EA9BE81E181EF40098EBE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EA9BE71E181EF40098EBE9 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A326B9D21E1D16170073F975 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A326B9D41E1D162D0073F975 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		A3EA9BAF1E181EE60098EBE9 /* ex2-1-10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ex2-1-10.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EA9BB31E181EE60098EBE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3EA9BB51E181EE60098EBE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,8 +53,6 @@
 		A3EA9BD31E181EE60098EBE9 /* ex2-1-10UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ex2-1-10UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EA9BD71E181EE60098EBE9 /* ex2_1_10UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ex2_1_10UITests.m; sourceTree = "<group>"; };
 		A3EA9BD91E181EE60098EBE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3EA9BE51E181EEF0098EBE9 /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Property List.plist"; path = "../../../Desktop/Property List.plist"; sourceTree = "<group>"; };
-		A3EA9BE71E181EF40098EBE9 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../Desktop/ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +106,10 @@
 				A3EA9BB51E181EE60098EBE9 /* AppDelegate.h */,
 				A3EA9BB61E181EE60098EBE9 /* AppDelegate.m */,
 				A3EA9BB81E181EE60098EBE9 /* ViewController.h */,
-				A3EA9BE71E181EF40098EBE9 /* ViewController.m */,
+				A326B9D21E1D16170073F975 /* ViewController.m */,
 				A3EA9BBB1E181EE60098EBE9 /* Main.storyboard */,
-				A3EA9BE51E181EEF0098EBE9 /* Property List.plist */,
 				A3EA9BBE1E181EE60098EBE9 /* Assets.xcassets */,
+				A326B9D41E1D162D0073F975 /* Property List.plist */,
 				A3EA9BC01E181EE60098EBE9 /* LaunchScreen.storyboard */,
 				A3EA9BC31E181EE60098EBE9 /* Info.plist */,
 				A3EA9BB21E181EE60098EBE9 /* Supporting Files */,
@@ -251,7 +251,7 @@
 			files = (
 				A3EA9BC21E181EE60098EBE9 /* LaunchScreen.storyboard in Resources */,
 				A3EA9BBF1E181EE60098EBE9 /* Assets.xcassets in Resources */,
-				A3EA9BE61E181EEF0098EBE9 /* Property List.plist in Resources */,
+				A326B9D51E1D162D0073F975 /* Property List.plist in Resources */,
 				A3EA9BBD1E181EE60098EBE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3EA9BB71E181EE60098EBE9 /* AppDelegate.m in Sources */,
-				A3EA9BE81E181EF40098EBE9 /* ViewController.m in Sources */,
+				A326B9D31E1D16170073F975 /* ViewController.m in Sources */,
 				A3EA9BB41E181EE60098EBE9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
