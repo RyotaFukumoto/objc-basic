@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ディズニー</key>
+	<dict>
+		<key>names</key>
+		<array>
+			<string>プー
+くまさん</string>
+			<string>ティガー</string>
+			<string>ピグレット</string>
+		</array>
+		<key>images</key>
+		<array>
+			<string>pooh</string>
+			<string>tigger</string>
+			<string>piglet</string>
+		</array>
+	</dict>
+	<key>サンリオ</key>
+	<dict>
+		<key>names</key>
+		<array>
+			<string>キティ</string>
+			<string>プリン</string>
+			<string>シナモン</string>
+		</array>
+		<key>images</key>
+		<array>
+			<string>kitty</string>
+			<string>purine</string>
+			<string>cinnamon</string>
+		</array>
+	</dict>
+</dict>
+</plist>
