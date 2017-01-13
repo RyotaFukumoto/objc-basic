@@ -56,11 +56,11 @@
     UIImage *image;
     
     switch (indexPath.section) {
-        case 1:
+        case 0:
             name = disney[@"names"][indexPath.row];
             image = [UIImage imageNamed: disney[@"images"][indexPath.row]];
             break;
-        case 0:
+        case 1:
             name = sanrio[@"names"][indexPath.row];
             image = [UIImage imageNamed: sanrio[@"images"][indexPath.row]];
             break;

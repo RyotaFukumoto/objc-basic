@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>サンリオ</key>
+	<key>Sanrio</key>
 	<dict>
 		<key>names</key>
 		<array>
@@ -17,12 +17,11 @@
 			<string>cinnamon</string>
 		</array>
 	</dict>
-	<key>ディズニー</key>
+	<key>Disney</key>
 	<dict>
 		<key>names</key>
 		<array>
-			<string>プー
-くまさん</string>
+			<string>プーさん</string>
 			<string>ティガー</string>
 			<string>ピグレット</string>
 		</array>
