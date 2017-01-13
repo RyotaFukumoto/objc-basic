@@ -27,14 +27,12 @@
     [alertController addAction:[UIAlertAction actionWithTitle:@"Twitter"
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction *action) {
-                                                          // cancelボタンが押された時の処理
                                                           
                                                           [self Twitter];
                                                       }]];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Line"
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction *action) {
-                                                          // cancelボタンが押された時の処理
                                                           
                                                           [self Line];
                                                       }]];
