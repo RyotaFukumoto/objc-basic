@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3C2D3551E2C691600B8C1B7 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C2D3541E2C691600B8C1B7 /* OverlayView.m */; };
 		A3D13DC01E167CF100BB1684 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D13DBF1E167CF100BB1684 /* main.m */; };
 		A3D13DC31E167CF100BB1684 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D13DC21E167CF100BB1684 /* AppDelegate.m */; };
 		A3D13DC61E167CF100BB1684 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D13DC51E167CF100BB1684 /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		A3D13DCE1E167CF100BB1684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3D13DCC1E167CF100BB1684 /* LaunchScreen.storyboard */; };
 		A3D13DD91E167CF100BB1684 /* ex2_1_9Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D13DD81E167CF100BB1684 /* ex2_1_9Tests.m */; };
 		A3D13DE41E167CF100BB1684 /* ex2_1_9UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D13DE31E167CF100BB1684 /* ex2_1_9UITests.m */; };
-		A3D13DF31E167D1700BB1684 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D13DF21E167D1700BB1684 /* OverlayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3C2D3531E2C691600B8C1B7 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		A3C2D3541E2C691600B8C1B7 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
 		A3D13DBB1E167CF100BB1684 /* ex2-1-9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ex2-1-9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D13DBF1E167CF100BB1684 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3D13DC11E167CF100BB1684 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		A3D13DDF1E167CF100BB1684 /* ex2-1-9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ex2-1-9UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D13DE31E167CF100BB1684 /* ex2_1_9UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ex2_1_9UITests.m; sourceTree = "<group>"; };
 		A3D13DE51E167CF100BB1684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3D13DF11E167D1700BB1684 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayView.h; path = "../../ex2-1-8/ex2-1-8/OverlayView.h"; sourceTree = "<group>"; };
-		A3D13DF21E167D1700BB1684 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverlayView.m; path = "../../ex2-1-8/ex2-1-8/OverlayView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 				A3D13DC21E167CF100BB1684 /* AppDelegate.m */,
 				A3D13DC41E167CF100BB1684 /* ViewController.h */,
 				A3D13DC51E167CF100BB1684 /* ViewController.m */,
-				A3D13DF11E167D1700BB1684 /* OverlayView.h */,
-				A3D13DF21E167D1700BB1684 /* OverlayView.m */,
+				A3C2D3531E2C691600B8C1B7 /* OverlayView.h */,
+				A3C2D3541E2C691600B8C1B7 /* OverlayView.m */,
 				A3D13DC71E167CF100BB1684 /* Main.storyboard */,
 				A3D13DCA1E167CF100BB1684 /* Assets.xcassets */,
 				A3D13DCC1E167CF100BB1684 /* LaunchScreen.storyboard */,
@@ -279,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3D13DC61E167CF100BB1684 /* ViewController.m in Sources */,
-				A3D13DF31E167D1700BB1684 /* OverlayView.m in Sources */,
+				A3C2D3551E2C691600B8C1B7 /* OverlayView.m in Sources */,
 				A3D13DC31E167CF100BB1684 /* AppDelegate.m in Sources */,
 				A3D13DC01E167CF100BB1684 /* main.m in Sources */,
 			);
@@ -513,6 +513,7 @@
 				A3D13DEA1E167CF100BB1684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3D13DEB1E167CF100BB1684 /* Build configuration list for PBXNativeTarget "ex2-1-9Tests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +522,7 @@
 				A3D13DED1E167CF100BB1684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3D13DEE1E167CF100BB1684 /* Build configuration list for PBXNativeTarget "ex2-1-9UITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +531,7 @@
 				A3D13DF01E167CF100BB1684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
