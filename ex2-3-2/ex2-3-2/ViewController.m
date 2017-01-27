@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
+#import "DbConnect.h"
 @interface ViewController ()
 @property DbConnect *conect ;
+@property (weak, nonatomic) IBOutlet UITableView *tableV;
 @end
 
 @implementation ViewController
@@ -20,6 +22,34 @@
     _conect = [[DbConnect alloc]initWithName:@"test.db"];
     [_conect pathSet];
     [_conect creater];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    [_conect selector];
+        [_tableV reloadData];
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _conect.todoList.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView
+        cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateStr =[formatter stringFromDate:_conect.todoList[indexPath.row].limit_date];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:@"myCell"];
+    }
+    
+    if(dateStr== NULL){
+        dateStr = @"";
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%@  %@",
+                           dateStr,
+                           _conect.todoList[indexPath.row].todo_title];
+    
+    return cell;
 }
 
 
@@ -32,7 +62,8 @@
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"toSecondView"]) {
-        SecondViewController *secondViewController = segue.destinationViewController;
+        SecondViewController *secondViewController
+        = segue.destinationViewController;
         secondViewController.connect = _conect;
     }
 }

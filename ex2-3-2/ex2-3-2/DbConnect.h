@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ListSeter.h"
 @interface DbConnect : NSObject
+@property NSMutableArray<ListSeter *> *todoList;
 @property     NSString *databasePath;
 -(void)pathSet;
 -(void)creater;
@@ -16,4 +17,5 @@
 -(void)insertor:(NSString*)todo_title
        contents:(NSString *)todo_contents
           limit:(NSDate *)limit_date;
+-(void)selector;
 @end
