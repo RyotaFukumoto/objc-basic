@@ -69,6 +69,14 @@
 }
     
 
+-(void)deleter:(NSInteger)todo_id{
+    NSString *sql =  @"UPDATE SAMPLE_TABLE SET delete_flag = ? WHERE todo_id = ?;";
+    [_db open];
+    [_db executeUpdate:sql, [NSNumber numberWithBool:YES],
+     [NSNumber numberWithInt:(int)todo_id]];
+    [_db close];
+    
+}
 
 
 
