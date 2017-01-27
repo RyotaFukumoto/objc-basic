@@ -10,6 +10,11 @@
 		093B4E834F5866662A0FA1E6 /* libPods-ex2-3-2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 827F7C3F9F588FE14A13FB45 /* libPods-ex2-3-2Tests.a */; };
 		107BFAA1552E2C6F75DF23D3 /* libPods-ex2-3-2UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C066C0F6E78530683B1A46 /* libPods-ex2-3-2UITests.a */; };
 		58A33FD6120166C55A3BE5EA /* libPods-ex2-3-2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 738581A215EDAC3F46918448 /* libPods-ex2-3-2.a */; };
+		A30DAD6D1E35980F00753759 /* DbConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = A30DAD6C1E35980F00753759 /* DbConnect.m */; };
+		A30DAD701E35A7C500753759 /* ListSeter.m in Sources */ = {isa = PBXBuildFile; fileRef = A30DAD6F1E35A7C500753759 /* ListSeter.m */; };
+		A30F3B501E2F2E15006A5D21 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A30F3B4F1E2F2E15006A5D21 /* OverlayView.m */; };
+		A30F3B551E31A717006A5D21 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30F3B541E31A717006A5D21 /* Second.storyboard */; };
+		A327E44B1E2F09C20035FE3E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A327E44A1E2F09C20035FE3E /* SecondViewController.m */; };
 		A3D568151E2DE0AE00C4ABAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D568141E2DE0AE00C4ABAB /* main.m */; };
 		A3D568181E2DE0AE00C4ABAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D568171E2DE0AE00C4ABAB /* AppDelegate.m */; };
 		A3D5681B1E2DE0AE00C4ABAB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D5681A1E2DE0AE00C4ABAB /* ViewController.m */; };
@@ -46,6 +51,15 @@
 		74C066C0F6E78530683B1A46 /* libPods-ex2-3-2UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ex2-3-2UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B5B21BE6FE695E3E6A1E96 /* Pods-ex2-3-2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ex2-3-2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ex2-3-2Tests/Pods-ex2-3-2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		827F7C3F9F588FE14A13FB45 /* libPods-ex2-3-2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ex2-3-2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30DAD6B1E35980F00753759 /* DbConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbConnect.h; sourceTree = "<group>"; };
+		A30DAD6C1E35980F00753759 /* DbConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbConnect.m; sourceTree = "<group>"; };
+		A30DAD6E1E35A7C500753759 /* ListSeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListSeter.h; sourceTree = "<group>"; };
+		A30DAD6F1E35A7C500753759 /* ListSeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListSeter.m; sourceTree = "<group>"; };
+		A30F3B4E1E2F2E15006A5D21 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		A30F3B4F1E2F2E15006A5D21 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		A30F3B541E31A717006A5D21 /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		A327E4491E2F09C20035FE3E /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		A327E44A1E2F09C20035FE3E /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		A3D568101E2DE0AE00C4ABAB /* ex2-3-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ex2-3-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D568141E2DE0AE00C4ABAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3D568161E2DE0AE00C4ABAB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,10 +159,19 @@
 				A3D568171E2DE0AE00C4ABAB /* AppDelegate.m */,
 				A3D568191E2DE0AE00C4ABAB /* ViewController.h */,
 				A3D5681A1E2DE0AE00C4ABAB /* ViewController.m */,
+				A30DAD6E1E35A7C500753759 /* ListSeter.h */,
+				A30DAD6F1E35A7C500753759 /* ListSeter.m */,
 				A3D5681C1E2DE0AE00C4ABAB /* Main.storyboard */,
+				A30F3B541E31A717006A5D21 /* Second.storyboard */,
+				A327E4491E2F09C20035FE3E /* SecondViewController.h */,
+				A327E44A1E2F09C20035FE3E /* SecondViewController.m */,
+				A30DAD6B1E35980F00753759 /* DbConnect.h */,
+				A30DAD6C1E35980F00753759 /* DbConnect.m */,
 				A3D5681F1E2DE0AE00C4ABAB /* Assets.xcassets */,
 				A3D568211E2DE0AE00C4ABAB /* LaunchScreen.storyboard */,
 				A3D568241E2DE0AE00C4ABAB /* Info.plist */,
+				A30F3B4E1E2F2E15006A5D21 /* OverlayView.h */,
+				A30F3B4F1E2F2E15006A5D21 /* OverlayView.m */,
 				A3D568131E2DE0AE00C4ABAB /* Supporting Files */,
 			);
 			path = "ex2-3-2";
@@ -297,6 +320,7 @@
 			files = (
 				A3D568231E2DE0AE00C4ABAB /* LaunchScreen.storyboard in Resources */,
 				A3D568201E2DE0AE00C4ABAB /* Assets.xcassets in Resources */,
+				A30F3B551E31A717006A5D21 /* Second.storyboard in Resources */,
 				A3D5681E1E2DE0AE00C4ABAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +484,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30DAD6D1E35980F00753759 /* DbConnect.m in Sources */,
+				A327E44B1E2F09C20035FE3E /* SecondViewController.m in Sources */,
+				A30F3B501E2F2E15006A5D21 /* OverlayView.m in Sources */,
 				A3D5681B1E2DE0AE00C4ABAB /* ViewController.m in Sources */,
+				A30DAD701E35A7C500753759 /* ListSeter.m in Sources */,
 				A3D568181E2DE0AE00C4ABAB /* AppDelegate.m in Sources */,
 				A3D568151E2DE0AE00C4ABAB /* main.m in Sources */,
 			);
@@ -700,6 +728,7 @@
 				A3D5683F1E2DE0AE00C4ABAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3D568401E2DE0AE00C4ABAB /* Build configuration list for PBXNativeTarget "ex2-3-2Tests" */ = {
 			isa = XCConfigurationList;
@@ -708,6 +737,7 @@
 				A3D568421E2DE0AE00C4ABAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3D568431E2DE0AE00C4ABAB /* Build configuration list for PBXNativeTarget "ex2-3-2UITests" */ = {
 			isa = XCConfigurationList;
@@ -716,6 +746,7 @@
 				A3D568451E2DE0AE00C4ABAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
