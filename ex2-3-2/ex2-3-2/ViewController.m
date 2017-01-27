@@ -35,7 +35,8 @@
         cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
-    NSString *dateStr =[formatter stringFromDate:_conect.todoList[indexPath.row].limit_date];
+    NSString *dateStr
+    =[formatter stringFromDate:_conect.todoList[indexPath.row].limit_date];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
@@ -51,7 +52,21 @@
     
     return cell;
 }
+-(void)tableView:(UITableView*)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath*)indexPath{
+    
+    if(editingStyle == UITableViewCellEditingStyleDelete){
+        [_conect deleter:_conect.todoList[indexPath.row].todo_id];
+        [_conect selector];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+        [tableView performSelector:@selector(reloadData)
+                        withObject:nil afterDelay:0.5];
 
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

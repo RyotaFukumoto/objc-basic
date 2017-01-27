@@ -18,4 +18,5 @@
        contents:(NSString *)todo_contents
           limit:(NSDate *)limit_date;
 -(void)selector;
+-(void)deleter:(NSInteger)todo_id;
 @end
