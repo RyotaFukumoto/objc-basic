@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DbConnect.h"
+@interface ViewController : UIViewController
+@property DbConnect *db;
 
-@interface ViewController : UIViewController{
-    NSString *databasePath;
-}
 
 
 @end

@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "FMDatabase.h"
+#import "SecondViewController.h"
 @interface ViewController ()
-
+@property DbConnect *conect ;
 @end
 
 @implementation ViewController
@@ -17,10 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES );
-    NSString *dir  = [paths objectAtIndex:0];
-    databasePath   = [dir stringByAppendingPathComponent:@"test.db"];
-    [self etcProcedure];
+    _conect = [[DbConnect alloc]initWithName:@"test.db"];
+    [_conect pathSet];
+    [_conect creater];
 }
 
 
@@ -28,13 +27,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)etcProcedure{
-    FMDatabase *db = [FMDatabase databaseWithPath:databasePath];
-    NSString *sql = @"CREATE TABLE IF NOT EXISTS SAMPLE_TABLE (todo_id INTEGER NOT NULL PRIMARY KEY,todo_title varchar NOT NULL, todo_conyrnts TEXT,created datetime,modified datetime,limit_date datetime,delete_flag bool);";
-    [db open];
-    [db executeUpdate:sql];
-    [db close];
+- (IBAction)tapSendBtn:(id)sender {
+    [self performSegueWithIdentifier:@"toSecondView" sender:self];
 }
-
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toSecondView"]) {
+        SecondViewController *secondViewController = segue.destinationViewController;
+        secondViewController.connect = _conect;
+    }
+}
 @end
