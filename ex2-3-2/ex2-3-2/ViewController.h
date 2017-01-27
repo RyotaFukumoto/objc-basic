@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DbConnect.h"
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property DbConnect *db;
 
 
