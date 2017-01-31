@@ -17,6 +17,7 @@
 		A39463C61E402FEB00C14A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39463C41E402FEB00C14A7C /* LaunchScreen.storyboard */; };
 		A39463D11E402FEB00C14A7C /* ex2_4_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A39463D01E402FEB00C14A7C /* ex2_4_1Tests.m */; };
 		A39463DC1E402FEB00C14A7C /* ex2_4_1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A39463DB1E402FEB00C14A7C /* ex2_4_1UITests.m */; };
+		A39463EB1E40448500C14A7C /* ApiConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = A39463EA1E40448500C14A7C /* ApiConnect.m */; };
 		D6D620C4897C196E711E9513 /* libPods-ex2-4-1UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F94419415DCEA537D8EECC07 /* libPods-ex2-4-1UITests.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		A39463D71E402FEB00C14A7C /* ex2-4-1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ex2-4-1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39463DB1E402FEB00C14A7C /* ex2_4_1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ex2_4_1UITests.m; sourceTree = "<group>"; };
 		A39463DD1E402FEB00C14A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A39463E91E40448500C14A7C /* ApiConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiConnect.h; sourceTree = "<group>"; };
+		A39463EA1E40448500C14A7C /* ApiConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiConnect.m; sourceTree = "<group>"; };
 		BB4E91452C3B441DB9EA0440 /* libPods-ex2-4-1Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ex2-4-1Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD065F02A78858C5199E2E94 /* Pods-ex2-4-1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ex2-4-1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ex2-4-1UITests/Pods-ex2-4-1UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D0D14BBFD93EB52417146ECE /* Pods-ex2-4-1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ex2-4-1UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ex2-4-1UITests/Pods-ex2-4-1UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				A39463BA1E402FEB00C14A7C /* AppDelegate.m */,
 				A39463BC1E402FEB00C14A7C /* ViewController.h */,
 				A39463BD1E402FEB00C14A7C /* ViewController.m */,
+				A39463E91E40448500C14A7C /* ApiConnect.h */,
+				A39463EA1E40448500C14A7C /* ApiConnect.m */,
 				A39463BF1E402FEB00C14A7C /* Main.storyboard */,
 				A39463C21E402FEB00C14A7C /* Assets.xcassets */,
 				A39463C41E402FEB00C14A7C /* LaunchScreen.storyboard */,
@@ -463,6 +468,7 @@
 				A39463BE1E402FEB00C14A7C /* ViewController.m in Sources */,
 				A39463BB1E402FEB00C14A7C /* AppDelegate.m in Sources */,
 				A39463B81E402FEB00C14A7C /* main.m in Sources */,
+				A39463EB1E40448500C14A7C /* ApiConnect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +706,7 @@
 				A39463E21E402FEB00C14A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A39463E31E402FEB00C14A7C /* Build configuration list for PBXNativeTarget "ex2-4-1Tests" */ = {
 			isa = XCConfigurationList;
@@ -708,6 +715,7 @@
 				A39463E51E402FEB00C14A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A39463E61E402FEB00C14A7C /* Build configuration list for PBXNativeTarget "ex2-4-1UITests" */ = {
 			isa = XCConfigurationList;
@@ -716,6 +724,7 @@
 				A39463E81E402FEB00C14A7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
