@@ -50,6 +50,7 @@
                                handler:^(UIAlertAction *action) {
                                    [_apiCon getJson:2];
                                }]];
+    
     // 画面に表示します
     [self presentViewController:alertController animated:YES completion:nil];
 
