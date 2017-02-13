@@ -7,7 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "ApiConnect.h"
+typedef NS_ENUM(NSInteger,dataType) {
+    today = 0,
+    tomorrow = 1,
+    dayAfterTomorrow = 2
+};
 @interface ViewController ()
 @property ApiConnect *apiCon;
 @end
@@ -36,19 +40,19 @@
                                 actionWithTitle:@"今日"
                                 style:UIAlertActionStyleDefault
                                 handler:^(UIAlertAction *action) {
-                                    [_apiCon getJson:0];
+                                    [_apiCon getJson:today];
     }]];
     [alertController addAction:[UIAlertAction
                                 actionWithTitle:@"明日"
                                 style:UIAlertActionStyleDefault
                                 handler:^(UIAlertAction *action) {
-                                    [_apiCon getJson:1];
+                                    [_apiCon getJson:tomorrow];
     }]];
     [alertController addAction:[UIAlertAction
                                actionWithTitle:@"明後日"
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action) {
-                                   [_apiCon getJson:2];
+                                   [_apiCon getJson:dayAfterTomorrow];
                                }]];
     
     // 画面に表示します
