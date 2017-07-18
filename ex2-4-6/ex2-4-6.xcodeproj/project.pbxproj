@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A358FFFD1F1BA54C0076AC34 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A358FFFC1F1BA54C0076AC34 /* Info.plist */; };
+		A3B76C9A1F1DA656006BCBCF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B76C991F1DA656006BCBCF /* Default-568h@2x.png */; };
 		A3D4A0D61EB030BD00191072 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4A0D51EB030BD00191072 /* main.m */; };
 		A3D4A0D91EB030BD00191072 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4A0D81EB030BD00191072 /* AppDelegate.m */; };
 		A3D4A0DC1EB030BD00191072 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D4A0DB1EB030BD00191072 /* ViewController.m */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		A358FFFC1F1BA54C0076AC34 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../.Trash/Info.plist; sourceTree = "<group>"; };
+		A3B76C991F1DA656006BCBCF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A3D4A0D11EB030BD00191072 /* ex2-4-6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ex2-4-6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3D4A0D51EB030BD00191072 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3D4A0D71EB030BD00191072 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		A3D4A0C81EB030BD00191072 = {
 			isa = PBXGroup;
 			children = (
+				A3B76C991F1DA656006BCBCF /* Default-568h@2x.png */,
 				A3D4A0D31EB030BD00191072 /* ex2-4-6 */,
 				A3D4A0ED1EB030BD00191072 /* ex2-4-6Tests */,
 				A3D4A0F81EB030BD00191072 /* ex2-4-6UITests */,
@@ -208,6 +211,7 @@
 				TargetAttributes = {
 					A3D4A0D01EB030BD00191072 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = F39YLTWJFM;
 						ProvisioningStyle = Automatic;
 					};
 					A3D4A0E91EB030BD00191072 = {
@@ -250,6 +254,7 @@
 				A358FFFD1F1BA54C0076AC34 /* Info.plist in Resources */,
 				A3D4A0E41EB030BD00191072 /* LaunchScreen.storyboard in Resources */,
 				A3D4A0E11EB030BD00191072 /* Assets.xcassets in Resources */,
+				A3B76C9A1F1DA656006BCBCF /* Default-568h@2x.png in Resources */,
 				A3D4A0DF1EB030BD00191072 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F39YLTWJFM;
 				INFOPLIST_FILE = "ex2-4-6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ryotaF.ex2-4-6";
@@ -439,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F39YLTWJFM;
 				INFOPLIST_FILE = "ex2-4-6/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ryotaF.ex2-4-6";
