@@ -37,8 +37,7 @@
 -(void)imgSender{
     NSURL *instagramURL = [NSURL URLWithString:@"instagram://camera"];
     
-    if([[UIApplication sharedApplication] canOpenURL:instagramURL]) //check for App is install or not
-    {
+    if([[UIApplication sharedApplication] canOpenURL:instagramURL])     {
         UIImage *imageToUse = _img;
         NSString *documentDirectory=[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
         NSString *saveImagePath=[documentDirectory stringByAppendingPathComponent:@"Image.igo"];
@@ -48,7 +47,7 @@
         self.interactionController=[[UIDocumentInteractionController alloc]init];
         self.interactionController = [UIDocumentInteractionController interactionControllerWithURL:imageURL];
         self.interactionController.delegate = self;
-        //        self.documentController.annotation = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"Testing"], @"InstagramCaption", nil];
+        
         NSString* captionString = [NSString  stringWithFormat:@"test"];
         
         self.interactionController.annotation = [NSDictionary dictionaryWithObject: captionString
