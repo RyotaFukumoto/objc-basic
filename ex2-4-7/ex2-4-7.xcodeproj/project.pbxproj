@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					A358FFC31F1BA4F90076AC34 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = F39YLTWJFM;
 						ProvisioningStyle = Automatic;
 					};
 					A358FFDC1F1BA4F90076AC34 = {
@@ -426,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F39YLTWJFM;
 				INFOPLIST_FILE = "ex2-4-7/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ryotaF.ex2-4-7";
@@ -437,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F39YLTWJFM;
 				INFOPLIST_FILE = "ex2-4-7/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ryotaF.ex2-4-7";
@@ -509,6 +512,7 @@
 				A358FFF31F1BA4F90076AC34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A358FFF41F1BA4F90076AC34 /* Build configuration list for PBXNativeTarget "ex2-4-7Tests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +521,7 @@
 				A358FFF61F1BA4F90076AC34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A358FFF71F1BA4F90076AC34 /* Build configuration list for PBXNativeTarget "ex2-4-7UITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +530,7 @@
 				A358FFF91F1BA4F90076AC34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
