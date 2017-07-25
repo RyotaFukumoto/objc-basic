@@ -1,0 +1,85 @@
+//
+//  ViewController.m
+//  ex2-5-3
+//
+//  Created by ryota on 2017/07/24.
+//  Copyright © 2017年 ryota. All rights reserved.
+//
+
+#import "ViewController.h"
+
+
+@interface ViewController ()
+
+//UI
+@property (weak, nonatomic) IBOutlet UIImageView *imgV;
+- (IBAction)takePhoto:(id)sender;
+//AV Foundation
+@property (nonatomic) AVCaptureSession  *captS;
+@property AVCaptureVideoPreviewLayer *videoPreviewLayer;
+@property (nonatomic) AVCapturePhotoOutput *imgOut;
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.captS = [[AVCaptureSession alloc] init];
+    self.captS.sessionPreset = AVCaptureSessionPreset1920x1080;
+    self.imgOut = [[AVCapturePhotoOutput alloc] init];
+    
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    NSError *error = [[NSError alloc] init];
+    
+    @try{
+        AVCaptureDeviceInput* input = [[AVCaptureDeviceInput alloc] initWithDevice:device
+                                                                             error:&error];
+        if ([self.captS canAddInput:input]) {
+            [self.captS addInput:input];
+            if ([self.captS canAddOutput:self.imgOut]) {
+                [self.captS addOutput:self.imgOut];
+                [self.captS startRunning];
+                AVCaptureVideoPreviewLayer* captureVideoLayer =
+                [[AVCaptureVideoPreviewLayer alloc]initWithSession:self.captS];
+                
+                captureVideoLayer.frame = self.imgV.bounds;
+                captureVideoLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+                [self.imgV.layer addSublayer:captureVideoLayer];
+            }
+        }
+    }
+    @catch (NSException *ex){
+        NSLog(@"%@",error);
+    }
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)takePhoto:(UIButton *)sender {
+    AVCapturePhotoSettings* settings = [[AVCapturePhotoSettings alloc] init];
+    settings.flashMode = AVCaptureFlashModeAuto;
+    [self.imgOut capturePhotoWithSettings:settings
+                                           delegate:self];
+}
+
+-(void)captureOutput:(AVCapturePhotoOutput *)captureOutput
+didFinishProcessingPhotoSampleBuffer:(nullable CMSampleBufferRef)photoSampleBuffer
+previewPhotoSampleBuffer:(nullable CMSampleBufferRef)previewPhotoSampleBuffer
+    resolvedSettings:(nonnull AVCaptureResolvedPhotoSettings *)resolvedSettings
+     bracketSettings:(nullable AVCaptureBracketedStillImageSettings *)bracketSettings
+               error:(nullable NSError *)error
+{
+    NSData* photoData = [AVCapturePhotoOutput
+                         JPEGPhotoDataRepresentationForJPEGSampleBuffer:photoSampleBuffer
+                         previewPhotoSampleBuffer:previewPhotoSampleBuffer];
+    
+    UIImage* resutImage = [[UIImage alloc] initWithData:photoData];
+    UIImageWriteToSavedPhotosAlbum(resutImage, nil, nil, nil);
+}
+@end
