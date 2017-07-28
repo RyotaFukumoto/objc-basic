@@ -64,6 +64,8 @@
 - (IBAction)takePhoto:(UIButton *)sender {
     AVCapturePhotoSettings* settings = [[AVCapturePhotoSettings alloc] init];
     settings.flashMode = AVCaptureFlashModeAuto;
+    
+    
     [self.imgOut capturePhotoWithSettings:settings
                                            delegate:self];
 }
@@ -75,11 +77,32 @@ previewPhotoSampleBuffer:(nullable CMSampleBufferRef)previewPhotoSampleBuffer
      bracketSettings:(nullable AVCaptureBracketedStillImageSettings *)bracketSettings
                error:(nullable NSError *)error
 {
+    
+    
     NSData* photoData = [AVCapturePhotoOutput
                          JPEGPhotoDataRepresentationForJPEGSampleBuffer:photoSampleBuffer
                          previewPhotoSampleBuffer:previewPhotoSampleBuffer];
     
     UIImage* resutImage = [[UIImage alloc] initWithData:photoData];
-    UIImageWriteToSavedPhotosAlbum(resutImage, nil, nil, nil);
+    
+    // UIImageをCIImageに変換
+    CIImage *filteredImage = [[CIImage alloc] initWithCGImage:resutImage.CGImage];
+    
+    // CIFilterを作成（今回はモノクロ風フィルタをかけます）
+    CIFilter *filter = [CIFilter filterWithName:@"CIMinimumComponent"];
+    [filter setValue:filteredImage forKey:@"inputImage"];
+    
+    // フィルタ後の画像を取得
+    filteredImage = filter.outputImage;
+    
+    // CIImageをUIImageに変換する
+    CIContext *ciContext = [CIContext contextWithOptions:nil];
+    CGImageRef imageRef = [ciContext createCGImage:filteredImage
+                                          fromRect:[filteredImage extent]];
+    UIImage *outputImage  = [UIImage imageWithCGImage:imageRef
+                                                scale:1.0f
+                                          orientation:UIImageOrientationUp];
+    CGImageRelease(imageRef);
+    UIImageWriteToSavedPhotosAlbum(outputImage, nil, nil, nil);
 }
 @end

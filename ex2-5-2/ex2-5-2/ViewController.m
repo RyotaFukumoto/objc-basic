@@ -52,12 +52,34 @@
     }
 }
 
-#pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
     // カメラロールに画像を保存する
-    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    
+
+    
+    // UIImageをCIImageに変換
+    CIImage *filteredImage = [[CIImage alloc] initWithCGImage:image.CGImage];
+    
+    // CIFilterを作成（今回はモノクロ風フィルタをかけます）
+    CIFilter *filter = [CIFilter filterWithName:@"CIMinimumComponent"];
+    [filter setValue:filteredImage forKey:@"inputImage"];
+    
+    // フィルタ後の画像を取得
+    filteredImage = filter.outputImage;
+    
+    // CIImageをUIImageに変換する
+    CIContext *ciContext = [CIContext contextWithOptions:nil];
+    CGImageRef imageRef = [ciContext createCGImage:filteredImage
+                                          fromRect:[filteredImage extent]];
+    UIImage *outputImage  = [UIImage imageWithCGImage:imageRef
+                                                scale:1.0f
+                                          orientation:UIImageOrientationUp];
+    CGImageRelease(imageRef);
+    
+    
+    UIImageWriteToSavedPhotosAlbum(outputImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
     [self dismissViewControllerAnimated:YES completion:nil];
-    _imgV.image = image;
+    _imgV.image = outputImage;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
