@@ -49,7 +49,14 @@
     self.title = [formatter stringFromDate:_FKNCalenderV.selectedDate];
     formatter.dateFormat = @"M";
     
+    _lastMonthBtn.enabled = YES;
+    _nextMonthBtn.enabled = YES;
     
+    if([[formatter stringFromDate:_FKNCalenderV.selectedDate]  isEqual: @"1"]){
+        _lastMonthBtn.enabled = NO;
+    }else if ([[formatter stringFromDate:_FKNCalenderV.selectedDate]  isEqual: @"12"]){
+        _nextMonthBtn.enabled = NO;
+    }
 }
 
 @end

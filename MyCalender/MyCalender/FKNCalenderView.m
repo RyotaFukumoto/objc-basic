@@ -152,7 +152,18 @@ static CGFloat const CellMargin = 2.0f;
     }else{
         NSDateFormatter *formatter = [NSDateFormatter new];
         formatter.dateFormat = @"d";
-        cell.label.text = [formatter stringFromDate:[self dateForCellAtIndexPath:indexPath]];
+        
+        NSDate *dateForCellAIP = [self dateForCellAtIndexPath:indexPath];
+        cell.label.text = [formatter stringFromDate:dateForCellAIP];
+        
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSInteger currentMonth = [calendar component:NSCalendarUnitMonth fromDate:self.selectedDate];
+        NSInteger month = [calendar component:NSCalendarUnitMonth fromDate:dateForCellAIP];
+        if(month != currentMonth){
+            cell.label.alpha = 0.5;
+        }else{
+            cell.label.alpha = 1.0;
+        }
         
     }
     cell.label.textColor = [self weekAColor:indexPath.row];

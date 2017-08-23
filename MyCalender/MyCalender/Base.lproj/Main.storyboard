@@ -60,6 +60,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="q9s-r3-yKl"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tga-DH-jSh"/>
+                                </connections>
                             </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yaA-45-IPV">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
