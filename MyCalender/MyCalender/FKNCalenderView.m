@@ -131,6 +131,18 @@ static CGFloat const CellMargin = 2.0f;
     }
 }
 
+-(UIColor *)weekAColor:(NSInteger)indexPath{
+    if(indexPath % DaysPerWeek == 0){
+        return [UIColor redColor];
+    }else if(indexPath % DaysPerWeek == 6){
+        return [UIColor blueColor];
+    }else{
+        return [UIColor blackColor];
+        
+    }
+}
+
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     FKNDayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ReuseIdentifier
@@ -141,7 +153,9 @@ static CGFloat const CellMargin = 2.0f;
         NSDateFormatter *formatter = [NSDateFormatter new];
         formatter.dateFormat = @"d";
         cell.label.text = [formatter stringFromDate:[self dateForCellAtIndexPath:indexPath]];
+        
     }
+    cell.label.textColor = [self weekAColor:indexPath.row];
     return cell;
 }
 
