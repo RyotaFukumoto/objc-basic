@@ -9,6 +9,10 @@
 #import "FKNCalenderView.h"
 #import "FKNDayCell.h"
 
+
+
+
+
 @implementation NSDate (Extension)
 
 /**
@@ -132,9 +136,9 @@ static CGFloat const CellMargin = 2.0f;
 }
 
 -(UIColor *)weekAColor:(NSInteger)indexPath{
-    if(indexPath % DaysPerWeek == 0){
+    if(indexPath % DaysPerWeek == Sun){
         return [UIColor redColor];
-    }else if(indexPath % DaysPerWeek == 6){
+    }else if(indexPath % DaysPerWeek == Sat){
         return [UIColor blueColor];
     }else{
         return [UIColor blackColor];
@@ -149,6 +153,7 @@ static CGFloat const CellMargin = 2.0f;
                                                               forIndexPath:indexPath];
     if(indexPath.section == 0){
         cell.label.text = weekADay[indexPath.row];
+        cell.label.alpha = 1.0;
     }else{
         NSDateFormatter *formatter = [NSDateFormatter new];
         formatter.dateFormat = @"d";
@@ -164,9 +169,10 @@ static CGFloat const CellMargin = 2.0f;
         }else{
             cell.label.alpha = 1.0;
         }
-        
+
     }
     cell.label.textColor = [self weekAColor:indexPath.row];
+
     return cell;
 }
 

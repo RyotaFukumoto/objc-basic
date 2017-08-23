@@ -12,9 +12,21 @@
 - (void)setSelectedDate:(NSDate *)selectedDate;
 @end
 
+typedef NS_ENUM(NSInteger,DayOfWeek){
+    Sun =0,
+    Mon,
+    Tue,
+    Wed,
+    Thu,
+    Fri,
+    Sat
+};
+
 @interface FKNCalenderView : UICollectionView<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>{
     id<CollectionViewDelegate>delegate2;
 }
+
+
 
 @property(nonatomic, retain) id<CollectionViewDelegate> delegate2;
 @property (nonatomic, strong) NSDate *selectedDate;

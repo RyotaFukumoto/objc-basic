@@ -25,14 +25,17 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+   
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
     _FKNCalenderV.delegate = _FKNCalenderV;
     _FKNCalenderV.dataSource = _FKNCalenderV;
     _FKNCalenderV.delegate2 = self;
     
     _FKNCalenderV.selectedDate = [NSDate date];
     [self setSelectedDate:_FKNCalenderV.selectedDate];
+    [super viewDidLoad];
 }
 
 
