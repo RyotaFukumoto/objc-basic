@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FKNCalenderView.h"
 
-@interface ViewController : UIViewController
+
+
+@interface ViewController : UIViewController<CollectionViewDelegate>
 
 
 @end
