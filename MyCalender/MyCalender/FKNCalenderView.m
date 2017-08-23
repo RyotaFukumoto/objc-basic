@@ -41,7 +41,9 @@
 
 @end
 
-static NSString * const ReuseIdentifier = @"Cell";
+static NSString* weekADay[7] = {@"日",@"月",@"火",@"水",@"木",@"金",@"土"};
+
+static NSString* const ReuseIdentifier = @"Cell";
 
 static NSUInteger const DaysPerWeek = 7;
 
@@ -107,28 +109,39 @@ static CGFloat const CellMargin = 2.0f;
 
 #pragma mark - UICollectionViewDataSource methods
 
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 2;
+}
+
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    // calculate number of weeks
-    NSRange rangeOfWeeks = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth
-                                                              inUnit:NSCalendarUnitMonth
-                                                             forDate:self.firstDateOfMonth];
-    NSUInteger numberOfWeeks = rangeOfWeeks.length;
-    NSInteger numberOfItems = numberOfWeeks * DaysPerWeek;
-    
-    return numberOfItems;
+    if(section == 0 ){
+        return DaysPerWeek;
+    }else{
+        // calculate number of weeks
+        NSRange rangeOfWeeks = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth
+                                                                  inUnit:NSCalendarUnitMonth
+                                                                 forDate:self.firstDateOfMonth];
+        NSUInteger numberOfWeeks = rangeOfWeeks.length;
+        NSInteger numberOfItems = numberOfWeeks * DaysPerWeek;
+        
+        return numberOfItems;
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     FKNDayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ReuseIdentifier
                                                               forIndexPath:indexPath];
-    
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"d";
-    cell.label.text = [formatter stringFromDate:[self dateForCellAtIndexPath:indexPath]];
-    
+    if(indexPath.section == 0){
+        cell.label.text = weekADay[indexPath.row];
+    }else{
+        NSDateFormatter *formatter = [NSDateFormatter new];
+        formatter.dateFormat = @"d";
+        cell.label.text = [formatter stringFromDate:[self dateForCellAtIndexPath:indexPath]];
+    }
     return cell;
 }
 
